@@ -1,0 +1,81 @@
+
+body{
+background-color: rgb(0, 0, 0);
+}
+
+header{
+    background-color: orangered;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ODS9{
+    padding-left: 20px;
+}
+
+#Wrapper{
+    background-color: rgb(0, 0, 0);
+    width: 1280px;
+    height: 900px;
+}
+
+#Topics{
+    padding-right: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.STitle{
+    font-size: 25px;
+    text-decoration: none;    
+    color: black;
+}
+
+.ContentType1{
+        height: 300px;
+        background-color: rgb(40, 43, 43);
+        display: flex;
+        gap: 25%;
+}
+
+#AboutODS{
+    height: 300px;
+    background-color: rgb(61, 165, 184);
+    display: flex;
+    gap: 25%;
+}
+
+#WTitle{
+    color: white;
+    font-weight: 20px;
+    font-size: 35px;    
+}
+#WText{
+    color: rgb(150, 139, 139);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.Title{
+    color:black;
+    font-weight: 20px;
+    font-size: 35px;
+}
+.Text{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.Imgs{
+    width: 500px;
+    height: 100%;
+}
+
+/* Orientações: 
+ - #Name: Elementos HTML ID. Estão sendo usados para aplicar um estilo único ao elemento. Alguns dos elementos html possuem um ID e um Class, servindo para: pegar propriedades da classe e aplicar algumas específicas ao ID.
+ - .Name: Classes. Serão utilizadas para aplicar um estilo específico aos elementos com a mesma classe. Um exemplo, são as imagens, já que seu tamanho e outras propriedades são fixos no layout do figma.
+ - Wrapper: Div quee engloba todo o site. 
+
+  - Obseervação: Sobre o site, montei somente algumas partes dele e organizei um pouco. Ainda falta muita coisa, como ajeitar a paleta com as cores do figma (esperando poder acessar comoe ditor para fazer isso) e terminar de estruturar o site. Mas parte da base já está montada.
+ */

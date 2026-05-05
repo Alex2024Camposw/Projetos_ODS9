@@ -34,11 +34,11 @@ header{
 }
 
 .ContentType1{
-    height: 300px;
+    height: 636px;
     background-color: #191818;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25%;
+    padding: 20px;
     align-content: center;
 }
 
@@ -51,16 +51,28 @@ header{
 }
 
 #AbODS9{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25%;
+}
+
+#AbODS9 img{
+    width: 75%;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#AbODS9 h1{
+    grid-row: 1;
+    grid-column: 2;
 }
 
 #AboutODS, #AbODS9{
-    height: 300px;
+    height: 600px;
     background-color:#455681;
 }
 
 #Problem{
+    padding: 20px;
     background-color: #B79B82;
 }
 
@@ -89,7 +101,7 @@ header{
     display: flex;
     align-self: center;
     margin-left: auto;
-    width: 200px;
+    width: 75%;
     height: 200px;
 }
 
@@ -108,7 +120,7 @@ header{
 
 #CCS img{
     width: 100%;
-    height: 50%;
+    height: 75%;
 }
 
 #Cause{

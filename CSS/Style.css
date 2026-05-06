@@ -34,33 +34,47 @@ header{
 }
 
 .ContentType1{
-    height: 300px;
-    background-color: #191818;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25%;
+    background-color: #191818; 
+    display: grid;
     align-content: center;
-}
+    height: 636px;
+    padding: 20px;
 
-.ContentType1 h1{
-    grid-column: 1;
-}
-
-.ContentType1 img{
-    grid-column: 2;
 }
 
 #AbODS9{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25%;
+    height: 100%;
+}
+
+.Imgs{
+    display: flex;
+    justify-self: center; /* centraliza horizontalmente na coluna 2 */
+    align-self: center;
+    width: 400px;
+    height: 400px;
+}
+
+#AbODS9 img{
+    padding: 20px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#AbODS9 h1{
+    grid-row: 1;
+    grid-column: 2;
 }
 
 #AboutODS, #AbODS9{
-    height: 300px;
+    height: 600px;
     background-color:#455681;
 }
 
 #Problem{
+    padding: 20px;
     background-color: #B79B82;
 }
 
@@ -85,54 +99,39 @@ header{
     font-weight: normal;
 }
 
-.Imgs{
-    display: flex;
-    align-self: center;
-    margin-left: auto;
-    width: 200px;
-    height: 200px;
-}
-
 /* Organização da última DIV com Grid. */
 
 #CCS{
   display: grid;
-  align-content: center;
+  justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 20px;
   padding: 20px;
   height: 1077px;
   background-color: #469A50;
 }
 
 #CCS img{
-    width: 100%;
-    height: 50%;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
 }
 
 #Cause{
-  width: 200px;
+  width: 300px;
   grid-column: 1;
   grid-row: 1;
 }
 
 #Consequence{
-  width: 200px;
+  width: 300px;
   grid-column: 2;
   grid-row: 1;
 }
 
+
 #Soluction{
-  width: 200px;
+  width: 300px;
   grid-column: 3;
   grid-row: 1;
 }
-
-/* Orientações: 
- - #Name: Elementos HTML ID. Estão sendo usados para aplicar um estilo único ao elemento. Alguns dos elementos html possuem um ID e um Class, servindo para: pegar propriedades da classe e aplicar algumas específicas ao ID.
- - .Name: Classes. Serão utilizadas para aplicar um estilo específico aos elementos com a mesma classe. Um exemplo, são as imagens, já que seu tamanho e outras propriedades são fixos no layout do figma.
- - Wrapper: Div quee engloba todo o site. 
-
-  - Observação: Sobre o site, montei somente algumas partes dele e organizei um pouco. Ainda falta muita coisa, como ajeitar a paleta com as cores do figma (esperando poder acessar comoe ditor para fazer isso) e terminar de estruturar o site. Mas parte da base já está montada.
- */

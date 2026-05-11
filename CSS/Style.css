@@ -32,26 +32,27 @@ header{
     color: black;
 }
 
-.ContentType1{
-    grid-template-columns: 1fr 1fr;
+.ContentType1{ /* Classe base para as divs. Determina um "Grid" base para que seja possível mudar a disposição dos elementos facilmente. */
+    display: grid; /* Torna a disposição da Div para o tipo "Grid" - similar à uma tabela. */
+    grid-template-columns: 1fr 1fr; /* O template da div será dividido em duas colunas e 1 linha. */
     background-color: #191818; 
-    display: grid;
     align-content: center;
     height: 636px;
     padding: 20px;
+}
 
+#Introduction img{
+    grid-column: 2;
 }
 
 #AbODS9{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     height: 100%;
 }
 
 .Imgs{
     display: flex;
     justify-self: center; /* centraliza horizontalmente na coluna 2 */
-    align-self: center;
+    align-content: center;
     width: 400px;
     height: 400px;
 }
@@ -104,8 +105,8 @@ header{
 #CCS{
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr; /* Cria 3 colunas */
+  grid-template-rows: auto auto;  /* Cria 2 linhas */
   padding: 20px;
   height: 1077px;
   background-color: #469A50;
@@ -136,48 +137,50 @@ header{
   grid-row: 1;
 }
 
-@media (max-width: 1120px) and (min-width: 800px){  /* Manipulação dos tamanhos de fonte (aumenta) para telas maiores. */
+ /* Medias Queries para responsividade. */
+
+@media (max-width: 1120px) and (min-width: 800px){ /* Diminui levemente a fonte acompanhando a diminuição do tamanho de tela */
 #Problem .Text{
     font-size: 15px;
 }
 }
 
 @media (max-width: 800px) and (min-width:0px){ /* Altera SOMENTE o CCS, vulgo, divisão final do site. Inclui um período entre 800-0. */
-.Imgs{
-    width: 200px;
+
+.Imgs{  /* Diminuição do tamanho das imagens */
+    width: 200px; 
     height: 200px;
 }
 .Title{
-    color:black;
-    font-weight: 20px;
-    font-size: 15px;
+    font-size: 15px; /* Diminuição do tamanho dos títulos */
 }
 .Text{
-    font-size: 10px;
-    font-weight: normal;
+    font-size: 10px; /* Diminuição do tamanho dos textos */
 }
     
-#CCS{
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+#CCS{ 
+  grid-template-columns: 1fr; /* Faz a disposição dos conteúdos serem na vertical ao criar uma coluna única */
+  grid-template-rows: auto auto auto; /* A coluna possuirá 3 linhas. */
 
   padding: 20px;
   height: 1077px;
   background-color: #469A50;
 }
 
+/* Diminui a altura da imagem da Div CCS para que não fuja do tamanho limite devido às outras alterações do site. */
 #CCS img{
     width: 200px;
     height: 120px;
 }
 
-#Cause{
-  display: grid;
+#Cause{ /* Possui um grid próprio para reposicionar as imagens */
+  display: grid; 
   grid-template-rows: auto auto auto;
   grid-column: 1;
   grid-row: 1;
 }
 
+/* Guia os elementos da div */
 #Cause h1{
     grid-row: 1;
 }
@@ -190,13 +193,14 @@ header{
     grid-row: 3;
 }
 
-#Consequence{
+#Consequence{ /* Possui um grid próprio para reposicionar as imagens */
   display: grid;
   grid-template-rows: auto auto auto auto;
   grid-column: 1;
   grid-row: 2;
 }
 
+/* Guia os elementos da div */
 #Consequence h1{
     grid-row: 1;
 }
@@ -215,14 +219,14 @@ header{
 }
 
 
-
-#Soluction{
+#Soluction{ /* Possui um grid próprio para reposicionar as imagens */
   display: grid;
   grid-template-rows: auto auto auto auto;
   grid-column: 1;
   grid-row: 3;
 }
 
+/* Guia os elementos da div */
 #Soluction h1{
     grid-row: 1;
 }
@@ -234,8 +238,6 @@ header{
 #Soluction p{
     grid-row: 3;
 }
-
-
 
 #Soluction  img{
   grid-column: 1;

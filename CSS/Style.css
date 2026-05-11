@@ -136,18 +136,17 @@ header{
   grid-row: 1;
 }
 
-@media (max-width: 700px){
-#IntTitle{
-    color: white;
-    font-weight: 20px;
-    font-size: 15px;  
+@media (max-width: 1120px) and (min-width: 800px){  /* Manipulação dos tamanhos de fonte (aumenta) para telas maiores. */
+#Problem .Text{
+    font-size: 15px;
 }
-#IntText{
-    color: rgb(150, 139, 139);
-    font-size: 10px;
-    font-weight: normal;
 }
 
+@media (max-width: 800px) and (min-width:0px){ /* Altera SOMENTE o CCS, vulgo, divisão final do site. Inclui um período entre 800-0. */
+.Imgs{
+    width: 200px;
+    height: 200px;
+}
 .Title{
     color:black;
     font-weight: 20px;
@@ -157,20 +156,7 @@ header{
     font-size: 10px;
     font-weight: normal;
 }
-
-.Imgs{
-    display: flex;
-    justify-self: center; /* centraliza horizontalmente na coluna 2 */
-    align-self: center;
-    width: 150px;
-    height: 150px;
-}
-
-
-#Problem .Text{
-    font-size: 10px;
-}
-
+    
 #CCS{
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
@@ -258,11 +244,6 @@ header{
 
 }
 
-@media (max-width: 1120px) and (min-width: 700px){
-#Problem .Text{
-    font-size: 15px;
-}
-}
 
 
 

@@ -91,7 +91,7 @@
 
             <div id= "Consequence">
             <h1 class = "Title"> Consequência </h1>
-            <p class = "Text"> O contato com esses produtos, além de ser prejudicial ao ambiente, pode também comprometer a saúde de pessoas e animais que entrarem em contato, causando diversas doenças. </p>
+            <p class = "Text" id = "FirstP"> O contato com esses produtos, além de ser prejudicial ao ambiente, pode também comprometer a saúde de pessoas e animais que entrarem em contato, causando diversas doenças. </p>
             <p class = "Text"> Dentre as substâncias tóxicas que se encontram nesses dispositivos, estão o chumbo, encontrado em baterias e soldas, o qual pode causar danos ao sistema nervoso. O mercúrio, presente em lâmpadas fluorescentes e circuitos eletrônicos, pode afetar o sistema nervoso e renal. O cádmio é encontrado em baterias recarregáveis, reconhecido como carcinogênico, podendo causar danos aos rins e pulmões. Também os bifenilos policlorados (PCBs) em equipamentos eletrônicos, são persistentes no meio ambiente, podendo causar impactos sérios à saúde e à fauna. </p>
             <a href = "https://brasilescola.uol.com.br/biologia/poluicao.htm"> <img src="IMG/Industry.png" alt="Uma imagem que apresenta uma indústria." class = "Imgs"> </a>
             </div>
@@ -99,7 +99,7 @@
             <div id= Soluction>
             <a href = "https://www.todamateria.com.br/o-que-e-ecologia/"> <img src="IMG/Ecology.png" alt="Uma imagem que mostra um símbolo de ecologia." class = "Imgs"> </a>
             <h1 class = "Title"> Solução </h1>
-            <p class = "Text"> A forma mais eficaz de reduzir drasticamente a quantidade de lixo eletrônico é a reciclagem. Muitas empresas atualmente possuem seus próprios centros de reciclagem, onde reutilizam os aparelhos antigos para criar os novos. Por isso, elas recebem os aparelhos antigos de seus clientes, entregá-los às suas respectivas empresas é uma forma de descarte. </p>
+            <p class = "Text" id = "FirstP"> A forma mais eficaz de reduzir drasticamente a quantidade de lixo eletrônico é a reciclagem. Muitas empresas atualmente possuem seus próprios centros de reciclagem, onde reutilizam os aparelhos antigos para criar os novos. Por isso, elas recebem os aparelhos antigos de seus clientes, entregá-los às suas respectivas empresas é uma forma de descarte. </p>
             <p class = "Text"> A gestão destes resíduos é regulamentada por lei, promovendo práticas sustentáveis. A Política Nacional de Resíduos Sólidos (Lei n.º 12.305/2010) estabelece as diretrizes necessárias. </p>
             </div>
         </div>
@@ -122,7 +122,9 @@
 
 ```csharp
 body{
-background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -155,26 +157,27 @@ header{
     color: black;
 }
 
-.ContentType1{
-    grid-template-columns: 1fr 1fr;
+.ContentType1{ /* Classe base para as divs. Determina um "Grid" base para que seja possível mudar a disposição dos elementos facilmente. */
+    display: grid; /* Torna a disposição da Div para o tipo "Grid" - similar à uma tabela. */
+    grid-template-columns: 1fr 1fr; /* O template da div será dividido em duas colunas e 1 linha. */
     background-color: #191818; 
-    display: grid;
     align-content: center;
     height: 636px;
     padding: 20px;
+}
 
+#Introduction img{
+    grid-column: 2;
 }
 
 #AbODS9{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     height: 100%;
 }
 
 .Imgs{
     display: flex;
     justify-self: center; /* centraliza horizontalmente na coluna 2 */
-    align-self: center;
+    align-content: center;
     width: 400px;
     height: 400px;
 }
@@ -198,6 +201,7 @@ header{
 #Problem{
     padding: 20px;
     background-color: #B79B82;
+    align-items: center;
 }
 
 #IntTitle{
@@ -226,8 +230,8 @@ header{
 #CCS{
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr; /* Cria 3 colunas */
+  grid-template-rows: auto auto;  /* Cria 2 linhas */
   padding: 20px;
   height: 1077px;
   background-color: #469A50;
@@ -256,6 +260,115 @@ header{
   width: 300px;
   grid-column: 3;
   grid-row: 1;
+}
+
+ /* Medias Queries para responsividade. */
+
+@media (max-width: 1120px) and (min-width: 800px){ /* Diminui levemente a fonte acompanhando a diminuição do tamanho de tela */
+#Problem .Text{
+    font-size: 15px;
+}
+}
+
+@media (max-width: 800px) and (min-width:0px){ /* Altera SOMENTE o CCS, vulgo, divisão final do site. Inclui um período entre 800-0. */
+
+.Imgs{  /* Diminuição do tamanho das imagens */
+    width: 200px; 
+    height: 200px;
+}
+.Title{
+    font-size: 15px; /* Diminuição do tamanho dos títulos */
+}
+.Text{
+    font-size: 10px; /* Diminuição do tamanho dos textos */
+}
+    
+#CCS{ 
+  grid-template-columns: 1fr; /* Faz a disposição dos conteúdos serem na vertical ao criar uma coluna única */
+  grid-template-rows: auto auto auto; /* A coluna possuirá 3 linhas. */
+
+  padding: 20px;
+  height: 1077px;
+  background-color: #469A50;
+}
+
+/* Diminui a altura da imagem da Div CCS para que não fuja do tamanho limite devido às outras alterações do site. */
+#CCS img{
+    width: 200px;
+    height: 120px;
+}
+
+#Cause{ /* Possui um grid próprio para reposicionar as imagens */
+  display: grid; 
+  grid-template-rows: auto auto auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Guia os elementos da div */
+#Cause h1{
+    grid-row: 1;
+}
+
+#Cause p{
+    grid-row: 2;
+}
+
+#Cause img{
+    grid-row: 3;
+}
+
+#Consequence{ /* Possui um grid próprio para reposicionar as imagens */
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Guia os elementos da div */
+#Consequence h1{
+    grid-row: 1;
+}
+
+#Consequence #FirstP{
+    grid-row: 2;
+}
+
+#Consequence p{
+    grid-row: 3;
+}
+
+#Consequence img{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+
+#Soluction{ /* Possui um grid próprio para reposicionar as imagens */
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* Guia os elementos da div */
+#Soluction h1{
+    grid-row: 1;
+}
+
+#Soluction #FirstP{
+    grid-row: 2;
+}
+
+#Soluction p{
+    grid-row: 3;
+}
+
+#Soluction  img{
+  grid-column: 1;
+  grid-row: 3;
+}
+
 }
 ```
 

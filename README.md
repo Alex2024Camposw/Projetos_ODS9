@@ -7,7 +7,7 @@
 >- Membros: Alex Campos de Oliveira, Christian Varandas, Pedro Dias, Rafael Torso.
 
 
->[!Important]
+> [!NOTE]
 >- HTML
 
 
@@ -117,7 +117,7 @@
 </html>
 ```
 
->[!Important]
+> [!NOTE]
 >- CSS
 
 ```csharp
@@ -258,3 +258,11 @@ header{
   grid-row: 1;
 }
 ```
+
+> [!NOTE]
+> Apresentação
+
+
+> [!NOTE]
+> Vídeo do Site
+

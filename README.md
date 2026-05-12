@@ -270,8 +270,7 @@ header{
 }
 }
 
-@media (max-width: 800px) and (min-width:0px){ /* Altera SOMENTE o CCS, vulgo, divisão final do site. Inclui um período entre 800-0. */
-
+@media (max-width: 800px) and (min-width: 0px){ /* Altera SOMENTE o CCS, vulgo, divisão final do site. Inclui um período entre 800-0. */
 .Imgs{  /* Diminuição do tamanho das imagens */
     width: 200px; 
     height: 200px;
@@ -280,9 +279,19 @@ header{
     font-size: 15px; /* Diminuição do tamanho dos títulos */
 }
 .Text{
-    font-size: 10px; /* Diminuição do tamanho dos textos */
+    font-size: 15px; /* Diminuição do tamanho dos textos */
 }
+
+#AboutODS, #AbODS9{ /* Diminuição de 2 Divs para que não haja um espaço enorme sem conteúdo. */
+    height: 400px;
+    background-color:#455681;
+}
+
     
+#Problem .Text{
+    font-size: 10px; /* Diminuição do tamanho de fonte da div #Problem. */
+}
+
 #CCS{ 
   grid-template-columns: 1fr; /* Faz a disposição dos conteúdos serem na vertical ao criar uma coluna única */
   grid-template-rows: auto auto auto; /* A coluna possuirá 3 linhas. */
@@ -290,6 +299,10 @@ header{
   padding: 20px;
   height: 1077px;
   background-color: #469A50;
+}
+
+#CCS .Text{
+        font-size: 10px; /* Diminuição do tamanho dos textos */
 }
 
 /* Diminui a altura da imagem da Div CCS para que não fuja do tamanho limite devido às outras alterações do site. */
@@ -369,7 +382,30 @@ header{
   grid-row: 3;
 }
 
+@media (max-width: 450px) and (min-width: 320px){  /* Basicamente, sobrepõe os valores do media que vai de 800 até 0, quando entrar no período 450-320. */
+
+#AboutODS, #AbODS9{ /* Diminuição de 2 Divs para que não haja um espaço enorme sem conteúdo. */
+    height: 200px;
+    background-color:#455681;
 }
+
+.Imgs{  /* Diminuição do tamanho das imagens */
+    width: 100px; 
+    height: 100px;
+}
+.Title{
+    font-size: 12px; /* Diminuição do tamanho dos títulos */
+}
+.Text{
+    font-size: 9px; /* Diminuição do tamanho dos textos */
+}
+#Problem .Text{
+    font-size: 9px; /* Diminuição do tamanho de fonte da div #Problem. */
+}
+}
+
+}
+
 ```
 
 > [!NOTE]

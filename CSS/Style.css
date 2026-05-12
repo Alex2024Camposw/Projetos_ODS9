@@ -166,7 +166,7 @@ header{
 
     
 #Problem .Text{
-    font-size: 12px; /* Diminuição do tamanho de fonte da div #Problem. */
+    font-size: 10px; /* Diminuição do tamanho de fonte da div #Problem. */
 }
 
 #CCS{ 
@@ -179,7 +179,7 @@ header{
 }
 
 #CCS .Text{
-        font-size: 12px; /* Diminuição do tamanho dos textos */
+        font-size: 10px; /* Diminuição do tamanho dos textos */
 }
 
 /* Diminui a altura da imagem da Div CCS para que não fuja do tamanho limite devido às outras alterações do site. */

@@ -1,0 +1,288 @@
+body{
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #F58041;
+    display: flex;
+    justify-content: space-between;
+}
+
+#ODS9{
+    padding-left: 20px;
+}
+
+#Wrapper{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%; 
+}
+
+#Topics{
+    padding-right: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.STitle{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;    
+    color: black;
+}
+
+.ContentType1{ /* Classe base para as divs. Determina um "Grid" base para que seja possível mudar a disposição dos elementos facilmente. */
+    display: grid; /* Torna a disposição da Div para o tipo "Grid" - similar à uma tabela. */
+    grid-template-columns: 1fr 1fr; /* O template da div será dividido em duas colunas e 1 linha. */
+    background-color: #191818; 
+    align-content: center;
+    height: 636px;
+    padding: 20px;
+}
+
+#Introduction img{
+    grid-column: 2;
+}
+
+#AbODS9{
+    height: 100%;
+}
+
+.Imgs{
+    display: flex;
+    justify-self: center; /* centraliza horizontalmente na coluna 2 */
+    align-content: center;
+    width: 400px;
+    height: 400px;
+}
+
+#AbODS9 img{
+    padding: 20px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#AbODS9 h1{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#AboutODS, #AbODS9{
+    height: 600px;
+    background-color:#455681;
+}
+
+#Problem{
+    padding: 20px;
+    background-color: #B79B82;
+    align-items: center;
+}
+
+#IntTitle{
+    color: white;
+    font-weight: 20px;
+    font-size: 35px;    
+}
+#IntText{
+    color: rgb(150, 139, 139);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.Title{
+    color:black;
+    font-weight: 20px;
+    font-size: 35px;
+}
+.Text{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* Organização da última DIV com Grid. */
+
+#CCS{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr; /* Cria 3 colunas */
+  grid-template-rows: auto auto;  /* Cria 2 linhas */
+  padding: 20px;
+  height: 1077px;
+  background-color: #469A50;
+}
+
+#CCS img{
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+#Cause{
+  width: 300px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#Consequence{
+  width: 300px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+
+#Soluction{
+  width: 300px;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+ /* Medias Queries para responsividade. */
+
+@media (max-width: 1120px) and (min-width: 800px){ /* Diminui levemente a fonte acompanhando a diminuição do tamanho de tela */
+#Problem .Text{
+    font-size: 15px;
+}
+}
+
+@media (max-width: 800px) and (min-width: 0px){ /* Altera SOMENTE o CCS, vulgo, divisão final do site. Inclui um período entre 800-0. */
+.Imgs{  /* Diminuição do tamanho das imagens */
+    width: 200px; 
+    height: 200px;
+}
+.Title{
+    font-size: 15px; /* Diminuição do tamanho dos títulos */
+}
+.Text{
+    font-size: 15px; /* Diminuição do tamanho dos textos */
+}
+
+#AboutODS, #AbODS9{ /* Diminuição de 2 Divs para que não haja um espaço enorme sem conteúdo. */
+    height: 400px;
+    background-color:#455681;
+}
+
+    
+#Problem .Text{
+    font-size: 10px; /* Diminuição do tamanho de fonte da div #Problem. */
+}
+
+#CCS{ 
+  grid-template-columns: 1fr; /* Faz a disposição dos conteúdos serem na vertical ao criar uma coluna única */
+  grid-template-rows: auto auto auto; /* A coluna possuirá 3 linhas. */
+
+  padding: 20px;
+  height: 1077px;
+  background-color: #469A50;
+}
+
+#CCS .Text{
+        font-size: 10px; /* Diminuição do tamanho dos textos */
+}
+
+/* Diminui a altura da imagem da Div CCS para que não fuja do tamanho limite devido às outras alterações do site. */
+#CCS img{
+    width: 200px;
+    height: 120px;
+}
+
+#Cause{ /* Possui um grid próprio para reposicionar as imagens */
+  display: grid; 
+  grid-template-rows: auto auto auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Guia os elementos da div */
+#Cause h1{
+    grid-row: 1;
+}
+
+#Cause p{
+    grid-row: 2;
+}
+
+#Cause img{
+    grid-row: 3;
+}
+
+#Consequence{ /* Possui um grid próprio para reposicionar as imagens */
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Guia os elementos da div */
+#Consequence h1{
+    grid-row: 1;
+}
+
+#Consequence #FirstP{
+    grid-row: 2;
+}
+
+#Consequence p{
+    grid-row: 3;
+}
+
+#Consequence img{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+
+#Soluction{ /* Possui um grid próprio para reposicionar as imagens */
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* Guia os elementos da div */
+#Soluction h1{
+    grid-row: 1;
+}
+
+#Soluction #FirstP{
+    grid-row: 2;
+}
+
+#Soluction p{
+    grid-row: 3;
+}
+
+#Soluction  img{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+@media (max-width: 450px) and (min-width: 320px){  /* Basicamente, sobrepõe os valores do media que vai de 800 até 0, quando entrar no período 450-320. */
+
+#AboutODS, #AbODS9{ /* Diminuição de 2 Divs para que não haja um espaço enorme sem conteúdo. */
+    height: 200px;
+    background-color:#455681;
+}
+
+.Imgs{  /* Diminuição do tamanho das imagens */
+    width: 100px; 
+    height: 100px;
+}
+.Title{
+    font-size: 12px; /* Diminuição do tamanho dos títulos */
+}
+.Text{
+    font-size: 9px; /* Diminuição do tamanho dos textos */
+}
+#Problem .Text{
+    font-size: 9px; /* Diminuição do tamanho de fonte da div #Problem. */
+}
+}
+
+}
+
+
+
+

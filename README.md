@@ -1,5 +1,4 @@
 >[!Important]
-<<<<<<< HEAD
  > `Repositório - Projetos`
 >- Turma: 1° Semestre de Ciência da Computação.
 >- Faculdade: Universidade Paulista.
@@ -414,12 +413,3 @@ header{
 
 > [!NOTE]
 > Vídeo do Site (LINK DO YOUTUBE)
-
-=======
- > `Repositório - Projeto de Extensão`
->- Turma: 1° Semestre de Ciência da Computação.
->- Faculdade: Universidade Paulista.
->- Polo: UNIP Marquês.
->- Sobre: Repositório para a documentação do projeto de extensão
->- Membros: Alex Campos de Oliveira, Christian Varandas, Pedro Dias, Rafael Torso.
->>>>>>> 8e0228733db77c457090c5684cdcd5b14fc9c4e2

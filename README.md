@@ -1,9 +1,9 @@
 >[!Important]
- > `Repositório - Projeto de Extensão`
+ > `Repositório - Projetos`
 >- Turma: 1° Semestre de Ciência da Computação.
 >- Faculdade: Universidade Paulista.
 >- Polo: UNIP Marquês.
->- Sobre: Repositório para a documentação do projeto de extensão
+>- Sobre: Repositório para a documentação do projeto baseada na ODS 9.
 >- Membros: Alex Campos de Oliveira, Christian Varandas, Pedro Dias, Rafael Torso.
 
 
@@ -405,13 +405,12 @@ header{
 }
 
 }
-
 ```
 
 > [!NOTE]
-> Apresentação
+> Apresentação (LINK DO YOUTUBE)
 
 
 > [!NOTE]
-> Vídeo do Site
+> Vídeo do Site (LINK DO YOUTUBE)
 

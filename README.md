@@ -408,8 +408,10 @@ header{
 ```
 
 > [!NOTE]
-> Apresentação (LINK DO YOUTUBE)
+> Apresentação
+
 
 
 > [!NOTE]
-> Vídeo do Site (LINK DO YOUTUBE)
+> Site
+https://youtu.be/rDx3Yt6CnYs?si=oMuahA0fa3-T4Ymz

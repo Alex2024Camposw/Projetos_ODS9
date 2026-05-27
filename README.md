@@ -166,7 +166,13 @@ header{
     padding: 20px;
 }
 
+#Introduction h1, p{
+    margin-left: 20px;
+}
+
 #Introduction img{
+    display: flex;
+    align-self: center;
     grid-column: 2;
 }
 
@@ -198,10 +204,26 @@ header{
     background-color:#455681;
 }
 
+/* Caso seja necessário trocar as fontes da seção 2 futuramente (baseado em um dos feedbacks) */
+#AboutODS h1, #AbODS9 h1, #AboutOds p, #AbODS9 p{
+    color:black;
+}
+
+#AboutODS p, #AbODS9 p{
+    font-size: 25px;
+}
+#AboutODS h1, #AbODS9 h1{
+    margin-left: 20px;
+}
+
 #Problem{
     padding: 20px;
     background-color: #B79B82;
     align-items: center;
+}
+
+#Problem h1{
+    margin-left: 20px;
 }
 
 #IntTitle{
@@ -211,14 +233,14 @@ header{
 }
 #IntText{
     color: rgb(150, 139, 139);
-    font-size: 20px;
+    font-size: 30px;
     font-weight: normal;
 }
 
 .Title{
     color:black;
     font-weight: 20px;
-    font-size: 35px;
+    font-size: 50px;
 }
 .Text{
     font-size: 20px;
@@ -235,6 +257,10 @@ header{
   padding: 20px;
   height: 1077px;
   background-color: #469A50;
+}
+
+#CCS .Title{
+    text-align: center;
 }
 
 #CCS img{
@@ -261,6 +287,45 @@ header{
   grid-column: 3;
   grid-row: 1;
 }
+ /* Personalização da Div "Recomendations", a qual possui os links utilizados de base para o conteúdo do site */ 
+
+#Recomendations{
+  background-color: #F58041;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;  /* Faz a orientação ser de cima para baixo. */ 
+}
+
+ /* Aplica display próprio para a Div dentro de Recomendations para os links. */ 
+#Links{
+    display: flex;
+    align-items: center;
+}
+ 
+/* Aplica orientação personalizada ao título. */ 
+#Recomendations  h1{
+    align-self: center;
+    font-size: 30px;
+}
+
+ /* Aplica orientação personalizada aos links. */ 
+#Recomendations a{
+    align-self: center;
+
+    padding: 10px;
+
+    font-size: 15px;
+    text-decoration: none;
+    color: black; 
+}
+
+ /* Aplica um efeito de "sobreposição" quando o mouse passa por cima dos textos com link. */ 
+#Recomendations a p:hover {
+    text-decoration:underline;
+    color:#1654f2;
+    font-size: 20px;
+}
 
  /* Medias Queries para responsividade. */
 
@@ -282,14 +347,39 @@ header{
     font-size: 15px; /* Diminuição do tamanho dos textos */
 }
 
+#AboutODS p, #AbODS9 p{
+    font-size: 15px;
+}
+
 #AboutODS, #AbODS9{ /* Diminuição de 2 Divs para que não haja um espaço enorme sem conteúdo. */
     height: 400px;
     background-color:#455681;
 }
-
     
 #Problem .Text{
     font-size: 10px; /* Diminuição do tamanho de fonte da div #Problem. */
+}
+
+#Recomendations{
+    height: 250px;
+    display: flex;
+}
+
+#Links{
+    display: block;
+}
+
+#Recomendations  h1{
+    font-size: 25px;
+}
+
+#Recomendations a{
+    padding: 0px;
+    font-size: 12px;
+
+    text-decoration: none;
+    text-align: center;
+    color: black;
 }
 
 #CCS{ 
@@ -384,6 +474,13 @@ header{
 
 @media (max-width: 450px) and (min-width: 320px){  /* Basicamente, sobrepõe os valores do media que vai de 800 até 0, quando entrar no período 450-320. */
 
+#ODS9{
+    font-size: 15px;
+}
+
+.STitle{
+    font-size: 10px;
+}
 #AboutODS, #AbODS9{ /* Diminuição de 2 Divs para que não haja um espaço enorme sem conteúdo. */
     height: 200px;
     background-color:#455681;
@@ -399,9 +496,21 @@ header{
 .Text{
     font-size: 9px; /* Diminuição do tamanho dos textos */
 }
+
+#AboutODS p, #AbODS9 p{
+    font-size: 9px;
+}
+
 #Problem .Text{
     font-size: 9px; /* Diminuição do tamanho de fonte da div #Problem. */
 }
+
+#Recomendations a, p:hover {
+    text-decoration:underline;
+    color:#1654f2;
+    font-size: 13px;
+}
+
 }
 
 }
